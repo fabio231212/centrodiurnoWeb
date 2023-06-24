@@ -8,8 +8,6 @@ function validarFormulario() {
         correo = $('#correo').val(),
         asunto = $('#asunto').val(),
         mensaje = $('#mensaje').val();
-    fechaNacimiento = $('#fechaNacimiento').val();
-    rango = $('#customRange1').val();
 
     // validamos el campo nombre
     if (nombre == "" || nombre == null) {
@@ -44,22 +42,6 @@ function validarFormulario() {
             return false;
         }
 
-    }
-
-    //validamos fecha
-    if (fechaNacimiento == "" || fechaNacimiento == null) {
-
-        cambiarColor("fechaNacimiento");
-        // mostramos le mensaje de alerta
-        mostraAlerta("Campo obligatorio");
-        return false;
-    }
-
-    //validamos genero
-    if (!$('input[name="genero"]').is(':checked')) {
-        cambiarColor("generos");
-        mostraAlerta("Por favor seleccione el género");
-        return false;
     }
 
     // validamos el asunto
@@ -109,13 +91,8 @@ function validarFormulario() {
 
 function LimpiarCampos() {
     $('input[type="text"]').val('');
-    $('input[type="date"]').val('');
     $('input[type="email"]').val('');
-    $('input[type="range"]').val('');
-    $('input[type="range"]').val('');
     $('#mensaje').val('');
-    $('input[name="genero"]').prop('checked', false);
-    $('input[type=checkbox]').prop('checked', false);
 }
 
 
@@ -149,28 +126,16 @@ function cambiarColor(dato) {
 
 function mostraAlerta(texto) {
     $('#enviar').after('<div style="color: red" class="alert"><i style="color: red" class="fa-solid fa-circle-exclamation"></i> Error: ' + texto + '</div>');
-    //  output.innerHTML =
-    //     "<div style='color: red'><i class='fas fa-exclamation-triangle'></i> No se pudo calcular la distancia.</div>";
 
 }
 
 function enviar() {
     var nombre = document.getElementsByName("nombre")[0].value;
     var correo = document.getElementsByName("correo")[0].value;
-    var rango = document.getElementsByName("rango")[0].value;
-    var genero = document.getElementsByName("genero")[0].value;
-    // var bachillerato = document.getElementsByName("Bachillerato")[0].value;
-    // var diplomado = document.getElementsByName("Diplomado")[0].value;
-    // var  licenciatura= document.getElementsByName("Licenciatura")[0].value;
     var asunto = document.getElementsByName("asunto")[0].value;
     var mensaje = document.getElementsByName("mensaje")[0].value;
-    var dtpFechaNacimiento = document.getElementsByName("fechaNacimiento")[0].value;
-    fechaNacimiento = new Date(dtpFechaNacimiento);
-    var getFecha = new Date();
-    var edad = getFecha.getFullYear() - fechaNacimiento.getFullYear();
 
-    // https://github.com/github/fetch
-    fetch("https://formsubmit.co/ajax/lusuarezag@est.utn.ac.cr", {
+    fetch("https://formsubmit.co/ajax/centrodiurnopoas88@yahoo.com", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -179,13 +144,6 @@ function enviar() {
         body: JSON.stringify({
             Nombre: nombre,
             Email: correo,
-            Nacimiento: fechaNacimiento,
-            Edad: edad,
-            Calificacion: rango,
-            Genero: genero,
-            // bachillerato: bachillerato,
-            // licenciatura: licenciatura,
-            // diplomado: diplomado,
             Asunto: asunto,
             Mensaje: mensaje
         })
