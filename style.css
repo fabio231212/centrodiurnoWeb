@@ -12,11 +12,11 @@ body {
 }
 
 nav{
-    background-color: #01adf3
+    background-color: #19A7CE;
 }
 
 footer{
-    background: #01adf3;
+    background: #19A7CE;
 }
 
 .containerafternav{
@@ -31,8 +31,8 @@ footer{
 }
 
 .link:hover {
-    color: #FFF200 !important;
-    border-bottom: #FFF200 1px solid;
+    color: #F6F1F1 !important;
+    border-bottom: #F6F1F1 1px solid;
     text-decoration: none !important;
 }
 
@@ -77,7 +77,7 @@ footer{
 
 
 .tarjetasInfo {
-    background-color: rgb(1, 173, 243);
+    background-color: #19A7CE;
     border-radius: 10px;
 
 }
@@ -92,7 +92,7 @@ footer{
 
 
 .tarjeta-ind {
-    background-color: rgba(19, 154, 207, 0.801);
+    background-color: #19A7CE;
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
     transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
