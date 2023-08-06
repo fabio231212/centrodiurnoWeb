@@ -3,3 +3,12 @@ textarea{
     max-height: 200px
 }
 
+@media (max-width: 767px) {
+  .display-6 {
+    font-size: 1.2rem;
+  }
+  
+  .fuenteO {
+    text-align: center;
+  }
+}
