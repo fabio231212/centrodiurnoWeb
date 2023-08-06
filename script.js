@@ -24,3 +24,6 @@ function openSpots() {
 function openNosotros() {
     window.location.href = "./paginas/Nosotros.html";
 }
+
+
+
